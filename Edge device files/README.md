@@ -1,4 +1,4 @@
-# Step 1
+# Step 1:
 
 ## install and setup Docker
 
@@ -28,7 +28,7 @@
 
 
 
-# Step 2
+# Step 2:
 
 ## install and setup the mongoDB service
 
@@ -36,25 +36,9 @@
 
 `sudo docker run -d --name project -p 27017:27017 -v ~/mongo_data:/data/db --restart unless-stopped mongo:4.0`
 
-# Step 3
 
-## install and setup the mqtt service
 
-`sudo apt install mosquitto`
-
-`sudo nano /etc/mosquitto/mosquitto.conf`
-
-## Edit the file in nano
-
-`listener 1883`
-`allow_anonymous true `
-
-`sudo mosquitto -c /etc/mosquitto/mosquitto.conf `
-
-`sudo systemctl start mosquitto`
-`sudo systemctl enable mosquitto`
-
-# Step 4
+# Step 3:
 ## Create a new virtual environment and install requirements.txt
 
 `python -m venv doorlock`
@@ -62,7 +46,7 @@
 `pip install -r requirements.txt`
 `cd doorlock/files`
 
-# Step 5:
+# Step 4:
 ## Register user
 
 `source doorlock/bin/activate  `
@@ -71,7 +55,7 @@
 
 Follow instructions in the console.
 
-# Step 6: 
+# Step 5: 
 ## Run the doorlock
 
 `source doorlock/bin/activate  `
